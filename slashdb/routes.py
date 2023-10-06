@@ -1,0 +1,15 @@
+def includeme(config):
+    config.add_static_view('static', 'static', cache_max_age=3600)
+    config.add_route('album_list', '/albums')
+    config.add_route('artist_list', '/artists')
+    config.add_route('invoice_list', '/invoices')
+    config.add_route('track_list', '/tracks')
+    config.add_route('playlist_list', '/playlists')
+    config.add_route('customer_list', '/customers')
+    config.add_route('filtered_customer_list', '/customers/{filter_attr}/{filter_value}')
+    config.add_route('filtered_album_list', '/albums/{filter_attr}/{filter_value}')
+    config.add_route('filtered_artist_list', '/artists/{filter_attr}/{filter_value}')
+    config.add_route('filtered_invoice_list', '/invoices/{filter_attr}/{filter_value}')
+    config.add_route('filtered_track_list', '/tracks/{filter_attr}/{filter_value}')
+    config.add_route('filtered_playlist_list', '/playlists/{filter_attr}/{filter_value}')
+
